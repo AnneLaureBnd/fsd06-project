@@ -1,0 +1,211 @@
+.Admin-support-popin
+	.Popin-content-maxscreen
+		max-height: calc(90vh - 117.4px - 35px)
+		min-height: 100px
+	.Popin-content
+		width: auto
+		height: 90vh
+
+		h2
+			font-size: 2rem
+			text-align-last: center
+		h3
+			font-size: 1.5rem
+			text-align-last: center
+			color: #009896
+		button
+			margin: auto
+			background-color: #eee
+			color: #494d4d
+		.Admin-renderHeader-renderListObject
+			height: auto
+			padding-bottom: 0
+			.PapList-list
+				&.ObjectList-row										
+					&.Admin-col
+						&-Texte
+							width: 80px
+							justify-content: center
+						&-TexteMini
+							width: 50px
+							justify-content: center
+						&-Email
+							width: 80px
+							justify-content: center
+						&-Lien
+							width: 80px
+							justify-content: center
+					@media(max-width: $break-normal)
+						flex-direction: row
+						align-items: center
+					.ObjectList-head
+						font-size: 0.9rem
+						@media(max-width: $break-normal)
+							display:flex
+
+.Admin-renderHeader-renderListObject
+	height: 600px
+	width: calc( 100vw - 328px)
+	overflow-x: auto
+	padding-bottom: 150px
+	.PapList-list
+		.ObjectList-col
+			font-size: 10px
+			justify-content: center
+			&.Admin-col
+				&-Texte
+					text-align: left
+					flex-direction: column
+					padding: 0px 10px 0px 10px
+					@media(max-width: $break-normal)
+						align-items: flex-start
+				&-Email
+					text-align: left
+					@media(max-width: $break-normal)
+						justify-content: flex-start
+				&-Lien
+					text-align: left
+					word-break: break-word
+					font-weight: bold
+					a
+						color: #009896
+					a:visited
+						text-decoration: none
+						color:#009896
+					@media(max-width: $break-normal)
+						justify-content: flex-start
+ 
+		&.ObjectList-row
+			width: fit-content			
+			.ElectorList-menu--add
+				.Tooltip
+					.Tooltip-content
+						.Button
+							&:disabled
+								color: $colorLayout3 !important
+								font-weight: bold
+			&.Head
+				position: sticky;
+				top: 0;
+				background-color: white;
+				z-index: 1;
+				.ObjectList-head
+					&.Admin-col
+						&-Email
+							text-align: center
+						&-Texte
+							text-align: center
+						@media(max-width: $break-normal)
+							display: flex
+							align-items: center
+							justify-content: center
+					
+	@media(max-width: $break-small)
+		width: calc( 100vw - 20px)
+ 
+.Administration-container
+	.Pagination
+		@media(max-width: $break-small)
+			padding-left: 0
+			margin-right: 10px
+					
+
+.Admin-col
+	word-break: break-word
+	margin : 5px
+	&-Texte
+		width: 125px
+	&-TexteMini
+		width: 80px
+		text-align: center
+	&-Email
+		width: 125px
+		a
+			word-break: break-word
+			font-weight: bold
+			color: #009896
+	&-Lien
+		width: 125px
+
+.Admin-Scrutin
+	.PapList-list
+		&.ObjectList-row
+			@media(max-width: $break-normal)
+				display: flex
+				flex-direction: row
+				padding: 20px 40px
+				&--error
+					align-items: center
+					display: -webkit-box
+					display: -ms-flexbox
+					display: flex
+					padding: 20px 40px
+					border-bottom: 0.5px solid #dadada
+					justify-content: space-between
+					color: $errorColor
+					width: fit-content
+			
+				&--warning
+					align-items: center
+					display: -webkit-box
+					display: -ms-flexbox
+					display: flex
+					padding: 20px 40px
+					border-bottom: 0.5px solid #dadada
+					justify-content: space-between
+					color: $warningColor
+					width: fit-content
+				&--disabled
+					align-items: center
+					display: -webkit-box
+					display: -ms-flexbox
+					display: flex
+					padding: 20px 40px
+					border-bottom: 0.5px solid #dadada
+					justify-content: space-between
+					color: $disabledColor
+					width: fit-content
+
+			&--error
+				color : $errorColor
+			&--warning
+				color : $warningColor
+			&--information
+				background-color : $informationLightUltraColor
+				color: $informationColor
+			&--disabled
+				background-color : $disabledLightUltraColor
+				color : $disabledColor
+
+	.SearchFormInList.Button
+	  width: auto;
+
+	.Button-fake
+		width: 135px
+	
+	.Button
+		width: 135px
+		font-size: 12px
+		.Icon
+			display: flex
+			align-items: center
+		.Admin-Button-Span
+			line-height: 15px
+			padding-bottom: 10px
+		&--Export
+			width: fit-content
+		&--Admin-Dl
+			width: 220px
+			.shape-triangle
+				transform: rotate(0deg)
+
+	.Button .Icon svg
+		height: 20px
+
+	.shape-triangle
+		margin: 0 10px
+
+	.Tooltip
+		.Button:not(:last-child)
+			border-bottom: 1px solid #009896 !important;
+			border-radius: 0;
